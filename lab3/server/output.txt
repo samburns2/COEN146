@@ -1,0 +1,43 @@
+UDP reliable server (stop and wait protocol)
+
+	create a socket
+
+	bind to a socket
+
+
+	while data is being recieved
+
+		wait for message from client
+
+		if checksum is correct
+
+			send ack back to the client
+
+
+	end connection 
+
+
+UDP reliable client
+	
+	create socket
+
+	while there is data to send
+
+		send 10 bits (alternate seqnum)
+
+		recieve ack
+
+			check checksum
+
+	close connection
+
+Header{
+	sum
+	len
+	cheksum
+}
+
+Packet{
+	header
+	data
+}
